@@ -1,0 +1,21 @@
+﻿main.obj : error LNK2001: 확인할 수 없는 외부 기호 _RTC_InitBase
+main.obj : error LNK2001: 확인할 수 없는 외부 기호 _RTC_Shutdown
+LINK : error LNK2001: 확인할 수 없는 외부 기호 mainCRTStartup
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\kernel32.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\user32.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\gdi32.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\winspool.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\comdlg32.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\advapi32.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\shell32.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\ole32.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\oleaut32.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\uuid.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\odbc32.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\odbccp32.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x86\msvcprtd.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\d3d11.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\d3dcompiler.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x86\dxguid.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x86\MSVCRTD.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+..\Binary\Client_Debug.exe : fatal error LNK1120: 3개의 확인할 수 없는 외부 참조입니다.
