@@ -17,6 +17,7 @@ private:
 	HWND		mhWnd;
 
 	static bool	mLoop;
+
 public:
 	static CEngine* GetInst()
 	{
@@ -28,5 +29,10 @@ public:
 	{
 		SAFE_DELETE(mInst);
 	}
+
+public:
+	bool Init(HINSTANCE hInst, const TCHAR* WindowName, int IconID,
+		int SmallIconID, int Width, int Height, bool WindowMode = true);
+	int Run();
 };
 
