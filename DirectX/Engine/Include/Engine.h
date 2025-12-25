@@ -30,6 +30,14 @@ public:
 		SAFE_DELETE(mInst);
 	}
 
+private:
+	void CreateWindowClass(const TCHAR* WindowName, int IconID,
+		int SmallIconID);
+
+	static LRESULT WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
+
+	bool Create(const TCHAR* WindowName, int Width, int Height);
+
 public:
 	bool Init(HINSTANCE hInst, const TCHAR* WindowName, int IconID,
 		int SmallIconID, int Width, int Height, bool WindowMode = true);

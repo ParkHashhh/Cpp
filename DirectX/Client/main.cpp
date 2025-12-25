@@ -21,7 +21,9 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         IDI_ICON1,IDI_ICON1,1280,720))
     {
         CEngine::DestroyInst();
+        return 0;
     }
-
-    return 0;
+    int Ret = CEngine::GetInst()->Run();
+    CEngine::DestroyInst();
+    return Ret;
 }
