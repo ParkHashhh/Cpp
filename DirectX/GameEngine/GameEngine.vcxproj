@@ -153,14 +153,53 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Asset\AssetManager.h" />
+    <ClInclude Include="Asset\Mesh\Mesh.h" />
+    <ClInclude Include="Asset\Mesh\MeshManager.h" />
+    <ClInclude Include="Asset\PathManager.h" />
+    <ClInclude Include="Asset\Shader\GraphicShader.h" />
+    <ClInclude Include="Asset\Shader\Shader.h" />
+    <ClInclude Include="Asset\Shader\ShaderColor2D.h" />
+    <ClInclude Include="Asset\Shader\ShaderManager.h" />
+    <ClInclude Include="Device.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="EngineInfo.h" />
+    <ClInclude Include="EngineMath.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Vector2.h" />
+    <ClInclude Include="Vector3.h" />
+    <ClInclude Include="Vector4.h" />
+    <ClInclude Include="World\World.h" />
+    <ClInclude Include="World\WorldManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Asset\AssetManager.cpp" />
+    <ClCompile Include="Asset\Mesh\Mesh.cpp" />
+    <ClCompile Include="Asset\Mesh\MeshManager.cpp" />
+    <ClCompile Include="Asset\PathManager.cpp" />
+    <ClCompile Include="Asset\Shader\GraphicShader.cpp" />
+    <ClCompile Include="Asset\Shader\Shader.cpp" />
+    <ClCompile Include="Asset\Shader\ShaderColor2D.cpp" />
+    <ClCompile Include="Asset\Shader\ShaderManager.cpp" />
+    <ClCompile Include="Device.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Vector3.cpp" />
+    <ClCompile Include="Vector4.cpp" />
+    <ClCompile Include="World\World.cpp" />
+    <ClCompile Include="World\WorldManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Copy.bat" />
+    <None Include="Share.hlsli" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GlobalShader2D.hlsl">
+      <FileType>Document</FileType>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

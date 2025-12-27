@@ -1,5 +1,12 @@
 ﻿#include "Engine.h"
-
+#include "Timer.h"
+#include "World/WorldManager.h"
+#include "Device.h"
+#include "Asset/AssetManager.h"
+#include "Asset/Mesh/MeshManager.h"
+#include "Asset/Mesh/Mesh.h"
+#include "Asset/Shader/ShaderManager.h"
+#include "Asset/Shader/Shader.h"
 
 CEngine* CEngine::mInst = nullptr;
 bool CEngine::mLoop = true;
@@ -118,6 +125,49 @@ bool CEngine::Create(const TCHAR* WindowName, int Width, int Height)
 	return true;
 }
 
+void CEngine::Logic()
+{
+	float DeltaTime = CTimer::Update();
+	Update(DeltaTime);
+	Render();
+}
+
+void CEngine::Render()
+{
+	// 디바이스 시작렌더 
+	CDevice::GetInst()->BeginRender();
+	// 샘플 출력
+	std::weak_ptr<CMeshManager> Weak_MeshMgr =
+		CAssetManager::GetInst()->GetMeshManager();
+	std::weak_ptr<CShaderManager> Weak_ShaderMgr =
+		CAssetManager::GetInst()->GetShaderManager();
+
+	// weak_ptr은 lock() 함수를 이용하여 shared_ptr을 만들고 사용해야한다
+	std::shared_ptr<CMeshManager>   MeshMgr = Weak_MeshMgr.lock();
+	std::shared_ptr<CShaderManager>   ShaderMgr = Weak_ShaderMgr.lock();
+
+	if (MeshMgr && ShaderMgr)
+	{
+		std::weak_ptr<CShader>  Weak_Shader = ShaderMgr->FindShader("Color2D");
+		std::weak_ptr<CMesh>  Weak_Mesh = MeshMgr->FindMesh("CenterRectColor");
+
+		std::shared_ptr<CShader>    Shader = Weak_Shader.lock();
+		std::shared_ptr<CMesh>    Mesh = Weak_Mesh.lock();
+
+		Shader->SetShader();
+
+		Mesh->Render();
+
+		CWorldManager::GetInst()->Render();
+		CDevice::GetInst()->EndRender();
+	}
+}
+
+void CEngine::Update(float DeltaTime)
+{
+	CWorldManager::GetInst()->Update(DeltaTime);
+}
+
 bool CEngine::Init(HINSTANCE hInst, const TCHAR* WindowName, int IconID,
 	int SmallIconID, int Width, int Height, bool WindowMode)
 {
@@ -127,6 +177,17 @@ bool CEngine::Init(HINSTANCE hInst, const TCHAR* WindowName, int IconID,
 	Create(WindowName, Width, Height);
 
 
+
+	if (!CDevice::GetInst()->Init(mhWnd, Width, Height, WindowMode))
+		return false;
+
+	if (!CAssetManager::GetInst()->Init())
+		return false;
+
+	if (!CWorldManager::GetInst()->Init())
+		return false;
+
+	CTimer::Init();
 
 	return true;
 }
@@ -149,8 +210,7 @@ int CEngine::Run()
 		}
 		else
 		{
-			// 2. 메시지가 없을 때 게임 로직 수행 (프레임워크의 핵심)
-			// 여기서 나중에 Update(), Render() 등을 호출합니다.
+			Logic();
 		}
 	}
 

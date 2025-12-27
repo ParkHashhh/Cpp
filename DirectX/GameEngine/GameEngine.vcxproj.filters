@@ -12,23 +12,158 @@
     <Filter Include="01. Core">
       <UniqueIdentifier>{e999a82c-72c5-4f18-86df-cdcc46ce7e94}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01. Core\01. Timer">
+      <UniqueIdentifier>{1c36dc9c-05b9-42cd-81c3-776a03ad51dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Core\02. Device">
+      <UniqueIdentifier>{41028426-cb40-4cd5-a6fc-4f1dcd53cd71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Core\Object">
+      <UniqueIdentifier>{51cd5862-23bd-4651-b206-0e67b35d1587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. World">
+      <UniqueIdentifier>{76ab9a43-ea77-4b9b-a96e-2d91fe6e7cf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Asset">
+      <UniqueIdentifier>{ad4b0b3b-33f3-4efb-97d0-c7f38b1c247c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Asset\01. Mesh">
+      <UniqueIdentifier>{6253b8fa-9493-49cc-99a7-7e4da6133fc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Asset\02.Shader">
+      <UniqueIdentifier>{68790927-eaec-4409-8ed8-67b208762522}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Asset\02.Shader\02. Shader">
+      <UniqueIdentifier>{f1ac5ba1-4ba8-4f3d-a2a8-193bf44043f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Asset\02.Shader\01. HLSL">
+      <UniqueIdentifier>{bc075301-3828-456b-8344-ae60a578aff7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Asset\02.Shader\02. Shader\01. Color2D">
+      <UniqueIdentifier>{30bf8348-7448-4510-ba33-b3c357363fe6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EngineInfo.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Engine.h">
       <Filter>01. Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>01. Core\01. Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineInfo.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineMath.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector4.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset\AssetManager.h">
+      <Filter>03. Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset\Mesh\MeshManager.h">
+      <Filter>03. Asset\01. Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>01. Core\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset\Mesh\Mesh.h">
+      <Filter>03. Asset\01. Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h">
+      <Filter>01. Core\02. Device</Filter>
+    </ClInclude>
+    <ClInclude Include="World\World.h">
+      <Filter>02. World</Filter>
+    </ClInclude>
+    <ClInclude Include="World\WorldManager.h">
+      <Filter>02. World</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset\PathManager.h">
+      <Filter>03. Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset\Shader\ShaderManager.h">
+      <Filter>03. Asset\02.Shader\02. Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset\Shader\Shader.h">
+      <Filter>03. Asset\02.Shader\02. Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset\Shader\GraphicShader.h">
+      <Filter>03. Asset\02.Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset\Shader\ShaderColor2D.h">
+      <Filter>03. Asset\02.Shader\02. Shader\01. Color2D</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
       <Filter>01. Core</Filter>
     </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>01. Core\01. Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Asset\AssetManager.cpp">
+      <Filter>03. Asset</Filter>
+    </ClCompile>
+    <ClCompile Include="Asset\Mesh\MeshManager.cpp">
+      <Filter>03. Asset\01. Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>01. Core\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Asset\Mesh\Mesh.cpp">
+      <Filter>03. Asset\01. Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Device.cpp">
+      <Filter>01. Core\02. Device</Filter>
+    </ClCompile>
+    <ClCompile Include="World\World.cpp">
+      <Filter>02. World</Filter>
+    </ClCompile>
+    <ClCompile Include="World\WorldManager.cpp">
+      <Filter>02. World</Filter>
+    </ClCompile>
+    <ClCompile Include="Asset\PathManager.cpp">
+      <Filter>03. Asset</Filter>
+    </ClCompile>
+    <ClCompile Include="Asset\Shader\ShaderManager.cpp">
+      <Filter>03. Asset\02.Shader\02. Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Asset\Shader\Shader.cpp">
+      <Filter>03. Asset\02.Shader\02. Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Asset\Shader\GraphicShader.cpp">
+      <Filter>03. Asset\02.Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Asset\Shader\ShaderColor2D.cpp">
+      <Filter>03. Asset\02.Shader\02. Shader\01. Color2D</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Copy.bat">
       <Filter>소스 파일</Filter>
+    </None>
+    <None Include="Share.hlsli">
+      <Filter>03. Asset\02.Shader\01. HLSL</Filter>
+    </None>
+    <None Include="GlobalShader2D.hlsl">
+      <Filter>03. Asset\02.Shader\01. HLSL</Filter>
     </None>
   </ItemGroup>
 </Project>

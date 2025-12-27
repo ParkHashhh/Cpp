@@ -15,6 +15,8 @@
 #include <d3d11.h>
 #include <d3dcompiler.h>
 
+#include "Matrix.h"
+
 #pragma comment(lib, "d3d11.lib")
 #pragma comment(lib, "d3dcompiler.lib")
 #pragma comment(lib, "dxguid.lib")
@@ -22,3 +24,30 @@
 #define	SAFE_DELETE(p)	if(p)	{ delete p; p = nullptr; }
 #define	SAFE_DELETE_ARRAY(p)	if(p)	{ delete[] p; p = nullptr; }
 #define	SAFE_RELEASE(p)	if(p)	{ p->Release(); p = nullptr; }
+
+
+struct FResolution
+{
+	int	Width = 0;
+	int	Height = 0;
+};
+
+struct FVertexColor
+{
+	// 위치
+	FVector3	Pos;
+
+	// 색상
+	FVector4	Color;
+
+	FVertexColor()
+	{
+	}
+
+	FVertexColor(float x, float y, float z, float r, float g, float b,
+		float a) :
+		Pos(x, y, z),
+		Color(r, g, b, a)
+	{
+	}
+};

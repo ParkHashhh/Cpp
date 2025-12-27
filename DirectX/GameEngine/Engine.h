@@ -38,9 +38,14 @@ private:
 
 	bool Create(const TCHAR* WindowName, int Width, int Height);
 
+	void Logic();
+	void Update(float DeltaTime);
+	void Render();
+
 public:
 	bool Init(HINSTANCE hInst, const TCHAR* WindowName, int IconID,
 		int SmallIconID, int Width, int Height, bool WindowMode = true);
 	int Run();
+
 };
 
